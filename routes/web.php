@@ -24,9 +24,9 @@ Route::get('r2', function(){
     return view('welcome');
 });
 
-Route::get('hello/{name?}',function($name = 'Everybody'){
+Route::get('hello/{name?}',['as'=>'hello.index',function($name = 'Everybody'){
     return'Hello,'.$name;
-});
+}]);
 Route::get('r3', function(){
     return redirect('r2');
 });
