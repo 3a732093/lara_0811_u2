@@ -30,3 +30,8 @@ Route::get('hello/{name?}',['as'=>'hello.index',function($name = 'Everybody'){
 Route::get('r3', function(){
     return redirect('r2');
 });
+
+
+Route::get('dashboard',function(){
+    return'dashboard';
+});
